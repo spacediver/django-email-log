@@ -22,6 +22,7 @@ class EmailBackend(BaseEmailBackend):
                 recipients=recipients,
                 subject=message.subject,
                 body=message.body,
+                html_body=message.html_body,
             )
             message.connection = self.connection
             num_sent += message.send()
